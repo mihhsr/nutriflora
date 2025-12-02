@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> nutriflora.com</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #0e2a47; /* Azul escuro */
+        }
+
+        header {
+            background-color: #0e2a47; /* Azul escuro */
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        nav {
+            background-color: #0fa64a; /* Verde */
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav a:hover {
+            background-color: #0e2a47;
+            border-radius: 5px;
+        }
+
+        .conteudo {
+            padding: 30px;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.ativo {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0e2a47;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <script>
+        function mostrarAba(abaId) {
+            const abas = document.querySelectorAll("section");
+            abas.forEach(aba => aba.classList.remove("ativo"));
+            document.getElementById(abaId).classList.add("ativo");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>NutriFlora</h1>
+        <p>Te ajudando na sua dieta com simplicidade!</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="mostrarAba('home')">Feed</a>
+        <a href="#" onclick="mostrarAba('sobre')"> Tabela </a>
+        <a href="#" onclick="mostrarAba('servicos')">Planos</a>
+        <a href="#" onclick="mostrarAba('contato')">Contato </a>
+    </nav>
+
+    <div class="conteudo">
+        <section id="home" class="ativo">
+            <h2>Coca Zero é Saudável? </h2>
+            <img src="cocaimg.jpg" alt="coca Zero" width="700" height="500">
+        </section>
+
+        <section id="sobre">
+            <h2>kcal de Alimentos </h2> <br>
+            <p>Alface: 15kcal <br>
+               Couve: 25 a 30kcal <br>
+               Espinafre: 23kcal <br>
+               Rúcula: 25kcal <br>
+
+                 <h2> Frutas</h2> <br>
+                 Banana Prata: 87kcal (por unidade) <br>
+                 Maça: 52kcal <br>
+                Laranja: 47: kcal <br>
+                 Mamão: 42kcal <br>
+
+                 <h2> Leguminosas</h2> <br>
+           Batata: 52kcal <br>
+           Beterraba: 45 kcal <br>
+           Chuchu: 17 kcal <br>
+           Cenoura: 35 kcal <br> 
+
+           <h2>Tipos de Grãos</h2> <br>
+            Grão de bico: por volta de 164 kcal <br>
+           Feijão: 139 kcal <br>
+           Castanha do Pará: 656 kcal <br>
+           Pipoca: 387kcal (sem óleo) <br>
+
+           <h2>Proteínas</h2> <br>
+           Frango:165 kcal <br>
+           Ovo: 155kcal <br>
+           Peixes:130kcal <br>
+           Soja: 147kcal <br>
+
+           <h2>Laticínios</h2> <br>
+           Queijo: 300 a 400 kcal (depende do Queijo) <br>
+           Leite:61 kcal <br>
+           Iorgute: 61 kcal ( Depende da Marca) <br>
+           Creme de Ricota: 144kcal <br>
+
+      <br>  <H3> As Kcal pode variar de Acordo com as Marcas</H3>
+
+                </p>
+                <link rel="stylesheet" href="style.css">
+                <img src="alimentaçao.jpg" alt="alimentaçao">
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Liste os serviços que você oferece ou informações importantes.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Adicione seu email, telefone, redes sociais, etc.</p>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 - NutriFlora| Nutrição básica.
+    </footer>
+
+</body>
+</html>
